@@ -19,7 +19,8 @@ APP_REF = ""  # Application Reference Number eg. "HUN/PEK/xxxxxx/xxxx/xx"
 LAST_NAME = ""  # Last Name eg. "ZHANG"
 MAX_ATTEMPTS = 5
 
-SEND_EMAIL = True  # 是否发送邮件通知
+SEND_EMAIL = False  # 是否发送邮件通知
+# If SEND_EMAIL is True
 SENDER = "" # 发送者名称 eg. "Visa Checker"
 SENDER_EMAIL = "" # 发送者邮箱
 SENDER_PASSWORD = "" # 发送者邮箱密码
@@ -141,7 +142,7 @@ try:
         raise RuntimeError("Status info not found")
 
     # 发送邮件通知
-    if SEND_EMAIL and "under process at Embassy/Consulate of Hungary" not in status_msg:
+    if SEND_EMAIL:
         import smtplib
         from email.mime.text import MIMEText
 
