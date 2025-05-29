@@ -12,20 +12,20 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s: %(mes
 
 # -------------------------
 # Configuration
-BROWSER = "safari"  # 浏览器类型
-webdriver_path = None  # WebDriver 路径，Safari 不需要指定(None)
+BROWSER = ""  # 浏览器类型 eg. "chrome", "firefox", "safari", "edge"
+webdriver_path = None  # WebDriver 路径，Safari 不需要指定(None) eg. "/path/to/chromedriver"
 
-APP_REF = "HUN/PEK/260525/0029/01"
-LAST_NAME = "ZHAI"
+APP_REF = ""  # Application Reference Number eg. "HUN/PEK/xxxxxx/xxxx/xx"
+LAST_NAME = ""  # Last Name eg. "ZHANG"
 MAX_ATTEMPTS = 5
 
 SEND_EMAIL = True  # 是否发送邮件通知
-SENDER = "MacBook"
-SENDER_EMAIL = "haoquan.zhai@qq.com"
-SENDER_PASSWORD = "nauescprmdsibgdh"
-SMTP_SERVER = "smtp.qq.com"
+SENDER = "" # 发送者名称 eg. "Visa Checker"
+SENDER_EMAIL = "" # 发送者邮箱
+SENDER_PASSWORD = "" # 发送者邮箱密码
+SMTP_SERVER = ""   # SMTP 服务器 eg. "smtp.example.com"
 SMTP_PORT = 587
-RECEIVER_EMAIL = "zhaihaoquan@icloud.com"
+RECEIVER_EMAIL = "" # 接收者邮箱
 # -------------------------
 logging.info(f"Application Reference Number: {APP_REF}")
 logging.info(f"Last Name: {LAST_NAME}")
